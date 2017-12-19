@@ -1,0 +1,426 @@
+
+//Colors=====================================================
+$blue-color1: #2c3c4c; //color of nav menu bg
+$blue-color2: #283543; //color of bg of nav menu active link
+$blue-color3: #34a5da; //default color of links and color of planned text in Planning table
+$blue-color4: #1581b3; //default color of hovered links
+$blue-color5: #e2f6ff; //dropper bg
+$gray-color1: #ccc; //color of input's borders
+$gray-color2: #999; //default font color
+$gray-color3: #666; //color of text in sub groups in Planning table
+$gray-color4: #ebeef3; //hover bg color of gray buttons
+$gray-color5: #e1e1e1; //default color of borders
+$gray-color6: #f4f6f8; //default color of bg
+$gray-color7: #f9fafb; //color of rows in Planning table and bg of gray buttons
+$gray-color8: #ededed; //color of aggregator rows of Report table
+$gray-color9: #c2c7cc; //color of switch-check-box bg
+//$gray-color9: #f3f4f6; //hover bg color of top header buttons and popover items //TODO: use $gray-color4
+$black-color1: #333; //color of input's text
+$orange-color1: #f75b36; //alert color
+$orange-color2: #fff6e4; //bg color of alert
+$green-color1: #84c612; //color of green button and nav
+$green-color2: #278a13; //darker green (used in progress bar and green buttons)
+$green-color3: #f8ffec; //bg of hints
+$green-color4: #dfeec5; //bg of progress bar in dashboard
+$green-color5: #999999; //text color
+//$green-color5: #237a0d; //green button hover border
+//$green-color6: #2c8d13; //green button hover bg
+
+$default-font: 'Rubik', sans-serif;
+$default-font-size: 13px;
+$default-font-color: $gray-color2;
+$default-line-height-computed: 17px;
+$link-color: $blue-color3;
+$link-color-hover: $blue-color4;
+$link-color-active: black;
+$notification-color: $orange-color1;
+
+$menu-bg-color: $blue-color1;
+$menu-link-color: #fff;
+$menu-link-border-color: $green-color1;
+$menu-link-icon-active-color: $green-color1;
+$menu-link-bg-active-color: $blue-color2;
+
+$btn-gray-color: $gray-color2;
+$btn-gray-border-color: $gray-color1;
+$btn-gray-border-hover-color: $gray-color1;
+$btn-gray-bg: $gray-color7;
+$btn-gray-hover-bg: $gray-color4;
+
+$btn-green-color: white;
+$btn-green-border-color: $green-color2;
+$btn-green-border-hover-color: $green-color2;
+$btn-green-bg: $green-color1;
+$btn-green-hover-bg: $green-color2;
+
+$default-input-color: $black-color1;
+$default-input-placeholder-color: $default-font-color;
+$default-input-border-color: $gray-color1;
+$default-input-border: 1px solid $default-input-border-color;
+$default-input-hover-border-color: $blue-color3;
+
+$default-border-color: $gray-color5;
+$default-border: 1px solid $default-border-color;
+
+$transition1: linear .2s;
+
+$shadow-color1: rgba(198, 204, 212, .75);
+$shadow-color2: rgba(0, 0, 0, .7);
+
+//Sizes================================================================
+$header-height: 45px;
+$footer-height: 68px;
+
+//Grid system==========================================================
+$notebook-height: 800px;
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+
+
+
+html {
+  //overflow-y: scroll;
+}
+
+body {
+  font-family: $default-font;
+  font-weight: 400;
+  font-size: $default-font-size;
+  color: $default-font-color;
+  line-height: $default-line-height-computed / $default-font-size;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+}
+
+input, button, textarea {
+  font-family: $default-font;
+}
+
+.link-default {
+  @extend .upcase-m;
+  color: $link-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+
+  &.active, &:active {
+    text-decoration: none;
+    color: $link-color-active;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: $default-font-color;
+    opacity: 0.5;
+  }
+}
+
+a.link-non-decorated {
+  //color: inherit;
+
+  &:hover, &:active {
+    //color: inherit;
+    text-decoration: none;
+    //opacity: 1;
+  }
+}
+
+.upcase-xs, .upcase-s, .upcase-m,
+.upcase-ml, .upcase-l, .upcase-l-2,
+.upcase-l-3, .upcase-xl, .upcase-xxl {
+  font-weight: 500;
+  text-transform: uppercase;
+  //color: $default-font-color;
+}
+
+.upcase-xs {
+  font-size: 9px;
+}
+
+.upcase-s {
+  font-size: 10px;
+}
+
+.upcase-m {
+  font-size: 11px;
+}
+
+.upcase-ml {
+  font-size: 12px;
+}
+
+.upcase-l {
+  font-size: 13px;
+}
+
+.upcase-l-2 {
+  font-size: 14px;
+}
+
+.upcase-l-3 {
+  font-size: 15px;
+}
+
+.upcase-xl {
+  font-size: 16px;
+}
+
+.upcase-xxl {
+  font-size: 24px;
+}
+
+.gray1-text {
+  color: $default-font-color;
+}
+
+.gray2-text {
+  color: $gray-color3;
+}
+
+.black1-text {
+  color: black;
+}
+
+.black2-text {
+  color: $black-color1;
+}
+
+.white-text {
+  color: white;
+}
+
+.orange-text {
+  color: $orange-color1;
+}
+
+.green-text {
+  color: $green-color1;
+}
+
+.blue-text {
+  color: $blue-color3;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.notification-count {
+  @extend .upcase-m;
+  display: inline-block;
+  background-color: $notification-color;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+}
+
+.text-tag {
+  @extend .upcase-m;
+  @extend .blue-text;
+  display: inline-block;
+  border: 1px solid $blue-color3;
+  border-radius: 3px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0px 5px;
+  transition: background $transition1;
+
+  &.gray {
+    border-color: $default-border-color;
+    color: $default-font-color;
+  }
+
+  &.deletable {
+    &:after {
+      font-family: "Linearicons-Free", sans-serif;
+      content: "\E870";
+      margin-left: 4px;
+      font-size: 12px;
+      line-height: 17px;
+      vertical-align: top;
+    }
+  }
+
+  &:hover, &:active, &.active {
+    text-decoration: none;
+    background: $blue-color3;
+    color: white;
+  }
+}
+
+.notification-feature {
+  @extend .upcase-m;
+  display: inline-block;
+  background: $notification-color;
+  height: 18px;
+  //width: 36px;
+  line-height: 18px;
+  padding: 0 7px;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.left-aligned {
+  margin-right: auto;
+}
+
+.right-aligned {
+  margin-left: auto;
+}
+
+.default-table {
+  width: 100%;
+  //margin-bottom: 20px;
+  tr {
+    &:first-child {
+      border-top: $default-border;
+    }
+    &.selected td {
+      background: $green-color3;
+    }
+  }
+  td {
+    border-bottom: $default-border;
+    vertical-align: middle;
+    padding: 10px 15px;
+    color: $gray-color3;
+    &:first-child {
+      padding-left: 20px;
+    }
+  }
+  .icons {
+    width: 1%;
+    white-space: nowrap;
+
+    .row-action {
+      //margin: 0 10px;
+    }
+  }
+  ui-text-box, ui-dropdown {
+    width: 100%;
+    //min-width: 150px;
+  }
+}
+
+.row-action {
+  display: inline-block;
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 18px;
+  text-align: center;
+  transition: background $transition1;
+
+  &:hover {
+    background: $gray-color4;
+    text-decoration: none;
+  }
+
+  &.icon-basic-magnifier-plus {
+    color: $blue-color3;
+  }
+  &.icon-basic-share {
+    color: $default-font-color;
+  }
+  &.icon-basic-elaboration-mail-next {
+    color: $default-font-color;
+  }
+  &.icon-basic-trashcan {
+    font-size: 16px;
+    color: $orange-color1;
+  }
+  &.lnr-pencil {
+    font-size: 16px;
+    line-height: 35px;
+    color: $blue-color3;
+  }
+  &.lnr-enter-down {
+    font-size: 18px;
+    line-height: 32px;
+    color: $orange-color1;
+  }
+  &.lnr-trash {
+    line-height: 35px;
+    color: $orange-color1;
+  }
+  &.lnr-checkmark-circle {
+    line-height: 35px;
+    color: $green-color1;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    color: $default-font-color;
+    opacity: 0.5;
+  }
+}
+
+.file-upload-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+  .input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
