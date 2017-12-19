@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
+
 // mongoose.connect('mongodb:localhost/allUsers2');
 //
 // var db = mongoose.connection;
@@ -16,7 +17,7 @@ const userSchema = new Schema({
     }
 } , {collection: 'newUsers'});
 
-module.exports = mongoose.model("User", userSchema);
+var User = module.exports = mongoose.model("User", userSchema);
 
 module.exports.createUser = function(newUser, callback) {
     bcrypt.genSalt(10, function(err, salt) {
@@ -27,3 +28,19 @@ module.exports.createUser = function(newUser, callback) {
         });
     });
 };
+
+module.exports.getUserByUsername = function(username, callback) {
+    var query = {username: username};
+    User.findOne(query, callback);
+};
+
+module.exports.getUserById = function(id, callback) {
+    User.findById(id, callback);
+};
+
+module.exports.comparePassword = function(candidatePassword, hash, callback) {
+    bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
+        if(err) throw err;
+        callback(null, isMatch);
+    })
+}

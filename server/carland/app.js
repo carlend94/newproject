@@ -36,9 +36,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
     secret: 'secret',
-    saveUnitialized: true,
-    resave: true
+    resave: true,
+    saveUninitialized: true,
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(expressValidator({
     errorFormatter: function(param, msg, value) {
