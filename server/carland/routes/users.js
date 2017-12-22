@@ -3,15 +3,17 @@ var router = express.Router();
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/user');
+var jwt = require('jwt-simple');
 /* GET users listing. */
+var app = express();
+var moment = require('moment');
 
 router.get('/register', function(req, res) {
     res.render('register');
 });
 
 router.get('/login', function(req, res) {
-    // res.render('login');
-    res.send('hello');
+    res.render('login');
 });
 
 router.post('/register', function(req, res) {
@@ -35,7 +37,6 @@ router.post('/register', function(req, res) {
        });
         User.createUser(newUser, function(err, user) {
             if(err) throw err;
-            console.log(user);
             res.send(200);
         });
 
@@ -76,8 +77,15 @@ passport.deserializeUser(function(id, done) {
 router.post('/login',
     passport.authenticate('local',{ successFlash: 'Welcome!' }),
     function(req, res) {
+        var expires = moment().add(7,'days').valueOf();
+        var payload = { foo: req.body.username };
+        var token = jwt.encode(payload, expires.toString());
         //here you can send user token;
-        res.send(req.body.username);
+        res.json({
+            name: req.body.username,
+            token : token,
+            expire: expires
+        });
     });
 
 

@@ -10,6 +10,7 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var bids = require('./routes/bids');
 var mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/allUsers2",{ useMongoClient: true } );
 var db = mongoose.connection;
@@ -74,4 +75,5 @@ app.use(function(err, req, res, next) {
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/bids', bids);
 module.exports = app;
