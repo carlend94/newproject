@@ -11,15 +11,8 @@ export class RegisterService {
   constructor(private router: Router, private http: HttpClient) {
   }
 
-  registerUser(): Observable<any> {
-    const body = new HttpParams()
-      .set('auto', 'lala')
-      .set('phone', 'sasa');
-
-    return this.http.post(`${this.url}/bids/bid/`,  body.toString(), {
-      headers: new HttpHeaders()
-        .set('Content-Type', 'application/x-www-form-urlencoded')
-    })
+  registerUser(data): Observable<any> {
+    return this.http.post(`${this.url}/users/register/`,  data)
       .map((res: Response) => {
         return res;
       });
