@@ -16,6 +16,8 @@ import { DriverComponent } from './driver/driver.component';
 import { ServiceComponent } from './service/service.component';
 import {BidService} from "./services/bid.service";
 import { TopLoginComponent } from './assets/top-login/top-login.component';
+import { RegisterComponent } from './register/register.component';
+import {RegisterService} from "./services/register.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { TopLoginComponent } from './assets/top-login/top-login.component';
     RoleSelectComponent,
     DriverComponent,
     ServiceComponent,
-    TopLoginComponent
+    TopLoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { TopLoginComponent } from './assets/top-login/top-login.component';
   providers: [
     AuthGuard,
     AuthenticationService,
-    BidService
+    BidService,
+    RegisterService
   ],
   bootstrap: [AppComponent]
 })

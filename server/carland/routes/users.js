@@ -17,22 +17,22 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/register', function(req, res) {
-    var username = req.body.username;
+    var email = req.body.email;
     var password = req.body.password;
-    var password2 = req.body.password2;
+    // var password2 = req.body.password2;
 
 
     // Validation
-    req.checkBody('username', 'Name is required').notEmpty();
+    req.checkBody('email', 'Email is required').notEmpty();
     req.checkBody('password', 'Password is required').notEmpty();
-    req.checkBody('password2', 'Password do not match').equals(req.body.password);
+    // req.checkBody('password2', 'Password do not match').equals(req.body.password);
     var errors = req.validationErrors();
 
     if(errors) {
         console.log('one field is empty')
     } else {
        var newUser = new User({
-           username: username,
+           email: email,
            password: password
        });
         User.createUser(newUser, function(err, user) {
@@ -45,8 +45,8 @@ router.post('/register', function(req, res) {
 });
 
 passport.use(new LocalStrategy(
-    function(username, password, done) {
-     User.getUserByUsername(username, function(err, user) {
+    function(email, password, done) {
+     User.getUserByEmail(email, function(err, user) {
          if(err) throw err;
          if(!user) {
              return  done(null, false, {message: 'Unknown User'});

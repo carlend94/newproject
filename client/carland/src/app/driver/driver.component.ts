@@ -33,7 +33,7 @@ export class DriverComponent implements OnInit {
       email: this.form.get('email').value
     };
 
-    this.bidservice.postBid()
+    this.bidservice.postBid(data)
       .subscribe(data=> {
         if(data.message == 200) {
           this.isSend = true;
