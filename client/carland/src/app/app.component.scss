@@ -1,3 +1,47 @@
 .register {
-  float: right;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+
+  .login-button {
+    margin-top: 10px;
+    margin-right: 50px;
+
+    .login {
+      margin-right: 5px;
+      width: 100px;
+      height: 30px;
+      color: white;
+      background-color: #84c612;
+      border: 1px solid #278a13;
+      border-radius: 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .login:hover {
+      background-color: #278a13;
+      transition: background linear .2s;
+    }
+
+    .registers {
+      margin-right: 5px;
+      width: 200px;
+      height: 30px;
+      color: white;
+      background-color: #84c612;
+      border: 1px solid #278a13;
+      border-radius: 10px;
+      font-size: 13px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .registers:hover {
+      background-color: #278a13;
+      transition: background linear .2s;
+    }
+
+  }
 }

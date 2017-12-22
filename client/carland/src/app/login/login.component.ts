@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {AuthenticationService} from "../services/authentication.service";
 import {Router} from "@angular/router";
 import {FormGroup, FormControl, Validators, FormBuilder} from "@angular/forms";
@@ -8,14 +8,13 @@ import {UserModel} from "../models/user.model";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   loading = false;
   error = '';
   form: FormGroup;
   public submitted: boolean;
-
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,
@@ -24,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.authenticationService.logout();
 
     this.form = new FormGroup({

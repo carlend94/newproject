@@ -22,20 +22,38 @@
     <!--<div *ngIf="error" class="alert alert-danger">{{error}}</div>-->
   <!--</form>-->
 <!--</div>-->
-
-
-  <form [formGroup]="form" novalidate (ngSubmit)="submitForm(form.value, form.valid)">
-    <div class="form-group">
-      <label for="name">E-mail</label>
-      <input type="text" class="form-control" placeholder="Your e-mail address"  formControlName="email" id="name" required>
+  <div class="leave-bid">
+    <div class="btn">
+      <button type="submit" class="btn btn-bid" routerLink="/driver">Оставить заявку на ремонт</button>
     </div>
+  </div>
+  <top-login></top-login>
+  <div class="login-container">
+    <div class="login-container_form">
+      <form [formGroup]="form" novalidate (ngSubmit)="submitForm(form.value, form.valid)">
+        <div class="form-group">
+          <div class="email">
+            <span>E-mail или номер телефона</span>
+          </div>
+          <div class="emails">
+          <input type="text" class="form-control email" placeholder="Введите ваш e-mail"  formControlName="email" id="name" required>
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label for="alterEgo">Password</label>
-      <input type="text" class="form-control" placeholder="Your Password"  formControlName="password" id="alterEgo" >
+        <div class="form-group">
+          <div class="password">
+            <span>Пароль</span>
+          </div>
+          <div class="passwords">
+            <input type="text" class="form-control password" placeholder="Введите ваш пароль"  formControlName="password" id="alterEgo" >
+          </div>
+        </div>
+
+        <div class="btn">
+          <button type="submit" class="btn btn-success">Войти</button>
+        </div>
+
+      </form>
     </div>
+  </div>
 
-    <button type="submit" class="btn btn-success">Submit</button>
-
-  </form>
-<h1>lala</h1>
