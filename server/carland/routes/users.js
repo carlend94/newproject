@@ -37,7 +37,7 @@ router.post('/register', function(req, res) {
        });
         User.createUser(newUser, function(err, user) {
             if(err) throw err;
-            res.send(200);
+            res.json({user: req.body.email});
         });
 
         req.flash('success_msg', 'You are register and now login');
