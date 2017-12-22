@@ -6,16 +6,16 @@
 <top-login></top-login>
 <div class="login-container">
   <div class="login-container_form">
-    <form [formGroup]="form" (ngSubmit)="registerUser(form.value, form.valid)" required>
+    <form [formGroup]="form" (ngSubmit)="registerUser(form.value, form.valid)">
       <div class="form-group">
         <div class="email">
           <span>E-mail или номер телефона</span>
         </div>
         <div class="emails">
-          <input class="form-control email" placeholder="Введите ваш e-mail или номер"  formControlName="email"  required>
+          <input class="form-control email" placeholder="Введите ваш e-mail или номер"   [formControl]="emailControl">
         </div>
-        <div *ngIf="email.errors.minLength">
-          Email is required.
+        <div *ngIf="emailControl.invalid">
+          Введите пожаEmail
         </div>
       </div>
 

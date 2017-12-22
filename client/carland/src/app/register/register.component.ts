@@ -9,11 +9,12 @@ import {RegisterService} from "../services/register.service";
 })
 export class RegisterComponent implements OnInit {
   form: FormGroup;
+  emailControl: FormControl;
   constructor(private registerService: RegisterService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
-      email: new FormControl('', [<any>Validators.required, <any>Validators.minLength(1)]),
+      email: this.emailControl = new FormControl('', [<any>Validators.required, <any>Validators.minLength(1)]),
       password: new FormControl('', [<any>Validators.required, <any>Validators.minLength(1)]),
       password2: new FormControl('', [<any>Validators.required, <any>Validators.minLength(1)])
     });
