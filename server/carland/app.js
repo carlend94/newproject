@@ -20,7 +20,6 @@ db.once('open', function() {
     // we're connected!var Bear = require('./models/bear');
     console.log('its ok')
 });
-
 var app = express();
 
 // view engine setup
@@ -63,7 +62,6 @@ app.use(expressValidator({
 app.use(flash());
 
 
-
 // error handler
 app.use(function(err, req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
@@ -76,4 +74,5 @@ app.use(function(err, req, res, next) {
 app.use('/', routes);
 app.use('/users', users);
 app.use('/bids', bids);
+
 module.exports = app;

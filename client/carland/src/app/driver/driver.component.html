@@ -9,7 +9,7 @@
 
   </div>
 
-  <div class="driver">
+  <form class="driver" [formGroup]="form" novalidat (ngSubmit)="submitNewForm()">
 
     <div class="aligner">
 
@@ -19,23 +19,47 @@
 
       <!--<div class="what-car"><span>Какое у вас авто?</span></div>-->
 
-      <div class="auto">
-        <input type="text" placeholder="Введите марку авто">
+      <div class="what-auto">
+        <div class="auto">
+          <input type="text" class="form-control" formControlName="auto" placeholder="Марка" required>
+        </div>
+        <div class="auto">
+          <input type="text" class="form-control" formControlName="model"  placeholder="Модель">
+        </div>
+        <div class="auto">
+          <input type="text" class="form-control" formControlName="years"  placeholder="Год">
+        </div>
       </div>
 
       <div class="what-broke">
-        <input type="text" placeholder="Что сломалось?">
+        <input type="text" class="form-control" formControlName="whatBroke"  placeholder="Что сломалось?">
       </div>
 
       <div class="data">
-        <input type="text" class="phone" placeholder="Ваш телефон">
+        <input type="text" class="form-control" formControlName="phone"  class="phone" placeholder="Ваш телефон">
         <span class="or">или</span>
-        <input type="text" class="email" placeholder="email">
+        <input type="text" class="form-control" formControlName="email"  class="email" placeholder="Ваш email">
       </div>
 
-      <button class="bid">Отправить заявку</button>
+      <button type="submit" class="bid">Отправить заявку</button>
+
 
     </div>
 
-  </div>
+  </form>
 
+
+  <!--<form [formGroup]="form" novalidate (ngSubmit)="submitForm(form.value, form.valid)">-->
+    <!--<div class="form-group">-->
+      <!--<label for="name">E-mail</label>-->
+      <!--<input type="text" class="form-control" placeholder="Your e-mail address"  formControlName="email" id="name" required>-->
+    <!--</div>-->
+
+    <!--<div class="form-group">-->
+      <!--<label for="alterEgo">Password</label>-->
+      <!--<input type="text" class="form-control" placeholder="Your Password"  formControlName="password" id="alterEgo" >-->
+    <!--</div>-->
+
+    <!--<button type="submit" class="btn btn-success">Submit</button>-->
+
+  <!--</form>-->

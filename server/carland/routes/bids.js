@@ -9,6 +9,8 @@ router.get('/bid', function(req, res) {
 router.post('/bid', function(req, res) {
     var newBid = new Bid({
         auto: req.body.auto,
+        model: req.body.model,
+        year: req.body.years,
         whatBroke: req.body.whatBroke,
         phone: req.body.phone,
         email: req.body.email

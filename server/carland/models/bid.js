@@ -7,11 +7,17 @@ const userSchema = new Schema({
         type: String,
         index: true
     },
+    model: {
+        type: String
+    },
+    years: {
+        type: String
+    },
     whatBroke: {
         type: String
     },
     phone: {
-        type: Number
+        type: String
     },
     email: {
         type: String

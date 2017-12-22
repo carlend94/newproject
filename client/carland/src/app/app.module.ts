@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RoleSelectComponent } from './role-select/role-select.component';
 import { DriverComponent } from './driver/driver.component';
 import { ServiceComponent } from './service/service.component';
+import {BidService} from "./services/bid.service";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ServiceComponent } from './service/service.component';
   ],
   providers: [
     AuthGuard,
-    AuthenticationService
+    AuthenticationService,
+    BidService
   ],
   bootstrap: [AppComponent]
 })

@@ -43,7 +43,9 @@
 
   -webkit-flex-flow: column;
   flex-flow: column;
-
+  .what-auto {
+    display: flex;
+  }
   .data {
     margin-bottom: 10px;
     span {
@@ -52,14 +54,12 @@
     .phone {
       width: 200px;
       height:30px;
-      text-transform: uppercase;
       text-align: center;
       margin-right: 10px;
     }
     .email {
       width: 200px;
       height:30px;
-      text-transform: uppercase;
       text-align: center;
       margin-left: 10px;
     }
@@ -78,19 +78,22 @@
   }
 
   .auto input {
-    width: 300px;
+    width: 100px;
     height: 40px;
+    margin-right: 10px;
     text-align: center;
     font-size: 13px;
-    text-transform: uppercase;
-  }
 
+  }
+  .what-broke {
+    margin-right: 10px;
+  }
   .what-broke input {
-    width: 300px;
+    width: 328px;
     height: 40px;
     text-align: center;
     font-size: 13px;
-    text-transform: uppercase;
+
   }
   .what-car span {
     font-size: 15px;
