@@ -8,7 +8,7 @@ import {DriverComponent} from "./driver/driver.component";
 import {ServiceComponent} from "./service/service.component";
 
 export const appRoutes: Routes = [
-  { path: '', redirectTo: 'role', pathMatch: 'full' },
+  { path: '', redirectTo: 'driver', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent,  canActivate: [AuthGuard]},
   { path: 'role', component: RoleSelectComponent},

@@ -1,22 +1,9 @@
 
-
-  <div class="register">
-
-    <div class="login-button">
-      <button class="login">Войти</button>
-      <button class="registers">Зарегистрироваться</button>
-    </div>
-
-  </div>
-
-  <form class="driver" [formGroup]="form" novalidat (ngSubmit)="submitNewForm()">
-
+  <form class="driver" *ngIf="!isSend" [formGroup]="form" novalidat (ngSubmit)="submitNewForm()">
     <div class="aligner">
-
       <div class="header">
         <span>Автосервисы для ремонта авто</span>
       </div>
-
       <!--<div class="what-car"><span>Какое у вас авто?</span></div>-->
 
       <div class="what-auto">
@@ -42,24 +29,27 @@
       </div>
 
       <button type="submit" class="bid">Отправить заявку</button>
-
-
     </div>
 
   </form>
 
+  <div class="success-bid" *ngIf="isSend">
+    <div class="aligner">
 
-  <!--<form [formGroup]="form" novalidate (ngSubmit)="submitForm(form.value, form.valid)">-->
-    <!--<div class="form-group">-->
-      <!--<label for="name">E-mail</label>-->
-      <!--<input type="text" class="form-control" placeholder="Your e-mail address"  formControlName="email" id="name" required>-->
-    <!--</div>-->
+      <div class="main-message">
+        <span>Ваша заявка была успешно отправленна</span>
+      </div>
+      <div class="sub-message">
+        <span>В течении 5 минут мы с вами свяжемся</span>
+      </div>
 
-    <!--<div class="form-group">-->
-      <!--<label for="alterEgo">Password</label>-->
-      <!--<input type="text" class="form-control" placeholder="Your Password"  formControlName="password" id="alterEgo" >-->
-    <!--</div>-->
+      <div class="make-choice">
+        <button type="submit" class="re-bid" (click)="reBid()">Отправить повторно заявку</button>
+        <button type="submit" class="user-register">Создать пользователя</button>
+      </div>
 
-    <!--<button type="submit" class="btn btn-success">Submit</button>-->
+    </div>
+  </div>
 
-  <!--</form>-->
+
+

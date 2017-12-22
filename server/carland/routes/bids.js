@@ -16,7 +16,7 @@ router.post('/bid', function(req, res) {
         email: req.body.email
     });
     newBid.save();
-    res.sendStatus(200);
+    res.json({message: 200});
 });
 
 module.exports = router;

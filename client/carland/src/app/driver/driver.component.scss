@@ -123,3 +123,46 @@
     font-size: 34px;
   }
 }
+
+
+.success-bid {
+  background-image:url("../../assets/img/car.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height:100vh;
+
+  .re-bid {
+    float: left;
+    margin-right: 5px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: #84c612;
+    border: 1px solid #278a13;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .re-bid:hover {
+    background-color: #278a13;
+    transition: background linear .2s;
+  }
+
+  .user-register {
+    margin-right: 5px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: #84c612;
+    border: 1px solid #278a13;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .user-register:hover {
+    background-color: #278a13;
+    transition: background linear .2s;
+  }
+}

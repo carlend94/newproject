@@ -9,7 +9,7 @@ import {BidService} from "../services/bid.service";
 })
 export class DriverComponent implements OnInit {
   form: FormGroup;
-
+  isSend: boolean = false;
   constructor(private bidservice: BidService) { }
 
   ngOnInit() {
@@ -35,9 +35,16 @@ export class DriverComponent implements OnInit {
 
     this.bidservice.postBid()
       .subscribe(data=> {
-        console.log(data);
+        if(data.message == 200) {
+          this.isSend = true;
+        }
       })
   }
+
+  reBid() {
+    this.isSend = false;
+  }
+
 
 
 }
