@@ -17,13 +17,13 @@ router.get('/login', function(req, res) {
 });
 
 router.post('/register', function(req, res) {
-    var email = req.body.email;
+    var username = req.body.username;
     var password = req.body.password;
     // var password2 = req.body.password2;
 
 
     // Validation
-    req.checkBody('email', 'Email is required').notEmpty();
+    req.checkBody('username', 'Username is required').notEmpty();
     req.checkBody('password', 'Password is required').notEmpty();
     // req.checkBody('password2', 'Password do not match').equals(req.body.password);
     var errors = req.validationErrors();
@@ -32,12 +32,12 @@ router.post('/register', function(req, res) {
         console.log('one field is empty')
     } else {
        var newUser = new User({
-           email: email,
+           username: username,
            password: password
        });
         User.createUser(newUser, function(err, user) {
             if(err) throw err;
-            res.json({user: req.body.email});
+            res.json({user: req.body.username});
         });
 
         req.flash('success_msg', 'You are register and now login');
@@ -45,8 +45,8 @@ router.post('/register', function(req, res) {
 });
 
 passport.use(new LocalStrategy(
-    function(email, password, done) {
-     User.getUserByEmail(email, function(err, user) {
+    function(username, password, done) {
+     User.getUserByUsername(username, function(err, user) {
          if(err) throw err;
          if(!user) {
              return  done(null, false, {message: 'Unknown User'});
@@ -82,7 +82,7 @@ router.post('/login',
         var token = jwt.encode(payload, expires.toString());
         //here you can send user token;
         res.json({
-            name: req.body.username,
+            username: req.body.username,
             token : token,
             expire: expires
         });

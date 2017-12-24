@@ -59,6 +59,7 @@
 .passwords {
   margin-top: 10px;
   text-align: center;
+
 .password {
   width: 300px;
   height: 30px;
@@ -94,4 +95,12 @@
 }
 
 
+}
+
+.passwords input {
+  text-align: center;
+  width: 300px;
+  height: 30px;
+  font-size: 13px;
+  color: black;
 }

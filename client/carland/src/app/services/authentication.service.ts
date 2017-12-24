@@ -5,19 +5,20 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class AuthenticationService {
+  url = 'http://localhost:3000';
   constructor(private http: Http) { }
 
-  login(email: string, password: string) {
-    return this.http.post('/users/authenticate', { email: email, password: password })
-      .map((response: Response) => {
+  login(data) {
+    return this.http.post(`${this.url}/users/login/`, {username: data.username, password: data.password} )
+      .map((res: Response) => {
         // login successful if there's a jwt token in the response
-        let user = response.json();
-        if (user && user.token) {
+        // let user = response;
+        if (res) {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser', JSON.stringify(user));
+          localStorage.setItem('currentUser', JSON.stringify(res));
         }
-
-        return user;
+        //
+        return res;
       });
   }
 

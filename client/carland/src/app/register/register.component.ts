@@ -24,22 +24,21 @@ export class RegisterComponent implements OnInit {
 
   registerUser() {
     let data = {
-      email: this.form.get('email').value,
+      username: this.form.get('email').value,
       password: this.form.get('password').value,
       password2: this.form.get('password2').value,
     };
 
-    console.log(data);
-    // this.bidservice.postBid()
-    //   .subscribe(data=> {
-    //     if(data.message == 200) {
-    //       this.isSend = true;
-    //     }
-    //   })
-    this.registerService.registerUser(data)
-      .subscribe(data => {
-        console.log(data);
-      })
+    if(this.form.get('password').value == this.form.get('password2').value) {
+      this.registerService.registerUser(data)
+        .subscribe(data => {
+          console.log(data);
+        })
+    } else {
+    alert('Ваши пароли не совпадают')
+    }
   }
+
+
 
 }

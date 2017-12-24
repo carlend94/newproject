@@ -34,23 +34,29 @@ export class LoginComponent implements OnInit {
   }
 
 
-  submitForm(model: UserModel) {
+  submitForm() {
+    let data = {
+      username: this.form.get('email').value,
+      password: this.form.get('password').value,
+    };
+
+
     this.submitted = true; // set form submit to true
 
-    // this.authenticationService.login(model)
-    //   .subscribe(
-    //     data => {
-    //             if (data === true) {
-    //               this.router.navigate(['/dashboard']);
-    //             } else {
-    //               this.error = 'Username or password is incorrect';
-    //               this.loading = false;
-    //             }
-    //       // this.router.navigate(['/']);
-    //     },
-    //     error => {
-    //   console.log(error);
-    //     });
+    this.authenticationService.login(data)
+      .subscribe(
+        data => {
+                if (data) {
+                  this.router.navigate(['/dashboard']);
+                } else {
+                  this.error = 'Username or password is incorrect';
+                  this.loading = false;
+                }
+          // this.router.navigate(['/']);
+        },
+        error => {
+      console.log(error);
+        });
 
 
   }
