@@ -9,6 +9,7 @@ import {RegisterComponent} from "./register/register.component";
 import {StoComponent} from "./sto/sto.component";
 import {AccountDataComponent} from "./sto/account-data/account-data.component";
 import {AllBidsComponent} from "./sto/all-bids/all-bids.component";
+import {MapsComponent} from "./maps/maps.component";
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'driver', pathMatch: 'full' },
@@ -30,6 +31,10 @@ export const appRoutes: Routes = [
       {
         path: 'dashboard',
         component: DashboardComponent
+      },
+      {
+        path: 'maps',
+        component: MapsComponent
       }
 
 

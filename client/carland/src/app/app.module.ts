@@ -20,6 +20,7 @@ import {RegisterService} from "./services/register.service";
 import { StoComponent } from './sto/sto.component';
 import { AccountDataComponent } from './sto/account-data/account-data.component';
 import { AllBidsComponent } from './sto/all-bids/all-bids.component';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AllBidsComponent } from './sto/all-bids/all-bids.component';
     RegisterComponent,
     StoComponent,
     AccountDataComponent,
-    AllBidsComponent
+    AllBidsComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,

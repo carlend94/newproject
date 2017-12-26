@@ -7,21 +7,31 @@
 
     <div class="data" [ngClass]="{'active': isClassVisible }" (click)="makeActive()" routerLink="/sto">
       <div class="links">
-        <i class="material-icons actives">info outline</i>
+        <i class="material-icons actives first" [ngClass]="{'activess': isClassVisible }">info outline</i>
       </div>
       <span>Ваши данные</span>
     </div>
+
     <div class="dashboard" [ngClass]="{'active': isClassVisible2 }" (click)="makeActive2()" routerLink="/sto/dashboard">
       <div class="links">
-        <i class="material-icons actives">home</i>
+        <i class="material-icons actives second" [ngClass]="{'activess': isClassVisible2 }">home</i>
       </div>
       <span>На главную</span>
     </div>
+
     <div class="bids" [ngClass]="{'active': isClassVisible3 }" (click)="makeActive3()" routerLink="/sto/bids">
       <div class="links">
-       <i class="material-icons actives">build</i>
+       <i class="material-icons actives third" [ngClass]="{'activess': isClassVisible3 }">build</i>
       </div>
       <span>Заявки на ремонт</span>
+    </div>
+
+    <div class="maps" [ngClass]="{'active': isClassVisible4 }" (click)="makeActive4()" routerLink="/sto/maps">
+      <div class="links">
+        <i class="material-icons actives fourth" [ngClass]="{'activess': isClassVisible4 }">local_car_wash</i>
+
+      </div>
+      <span>Карта всех СТО</span>
     </div>
   </div>
 
