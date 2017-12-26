@@ -38,7 +38,7 @@
   <div class="right-side">
     <div class="header">
       <div class="finder">
-        <i class="material-icons find-icon">find_replace</i>
+        <i class="material-icons find-icon">search</i>
         <input type="text" class="search-input">
       </div>
 
@@ -49,11 +49,30 @@
       </div>
 
       <div class="profile">
-        <div class="icon">
+        <div class="icon" (mouseenter)="onHovering($event)" (mouseleave)="onUnovering($event)" >
           <i class="material-icons acc">account_circle</i>
           <span>Добро пожаловать, Yarik</span>
+          <i class="material-icons arrow-down-icon">keyboard_arrow_down</i>
+          <div class="profile-menu" *ngIf="isHover" (mouseenter)="onHovering($event)">
+            <div class="menu">
+              <div class="profiles" routerLink="/sto"  (click)="makeActive()">
+                <i class="material-icons information-icon">information</i>
+                <span class="my-profile">Мой профайл</span>
+              </div>
+              <div class="logout" (click)="logout()" routerLink="/login">
+                <i class="material-icons lock-open-icon">lock_open</i>
+                <span class="logout-me">Выйти</span>
+              </div>
+            </div>
+
+          </div>
         </div>
 
+      </div>
+    </div>
+    <div class="your-page">
+      <div class="page">
+        <span>{{yourData}}</span>
       </div>
     </div>
     <router-outlet></router-outlet>
