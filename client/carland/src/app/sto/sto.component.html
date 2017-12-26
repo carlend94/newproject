@@ -1,0 +1,32 @@
+<!--<div class="header">-->
+  <!--<span>Горячая линия: (099)-555-55-55</span>-->
+<!--</div>-->
+<div class="sto-menu">
+  <div class="left-side">
+    <div class="logo"><span>carland.com.ua</span></div>
+
+    <div class="data" [ngClass]="{'active': isClassVisible }" (click)="makeActive()" routerLink="/sto">
+      <div class="links">
+        <i class="material-icons actives">info outline</i>
+      </div>
+      <span>Ваши данные</span>
+    </div>
+    <div class="dashboard" [ngClass]="{'active': isClassVisible2 }" (click)="makeActive2()" routerLink="/sto/dashboard">
+      <div class="links">
+        <i class="material-icons actives">home</i>
+      </div>
+      <span>На главную</span>
+    </div>
+    <div class="bids" [ngClass]="{'active': isClassVisible3 }" (click)="makeActive3()" routerLink="/sto/bids">
+      <div class="links">
+       <i class="material-icons actives">build</i>
+      </div>
+      <span>Заявки на ремонт</span>
+    </div>
+  </div>
+
+  <div class="right-side">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

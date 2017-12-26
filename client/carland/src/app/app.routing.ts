@@ -5,8 +5,10 @@ import {DashboardComponent} from "./dashboard/dashboard.component";
 import {AuthGuard} from "./services/authGuard.service";
 import {RoleSelectComponent} from "./role-select/role-select.component";
 import {DriverComponent} from "./driver/driver.component";
-import {ServiceComponent} from "./service/service.component";
 import {RegisterComponent} from "./register/register.component";
+import {StoComponent} from "./sto/sto.component";
+import {AccountDataComponent} from "./sto/account-data/account-data.component";
+import {AllBidsComponent} from "./sto/all-bids/all-bids.component";
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'driver', pathMatch: 'full' },
@@ -14,6 +16,23 @@ export const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent,  canActivate: [AuthGuard]},
   { path: 'role', component: RoleSelectComponent},
   { path: 'driver', component: DriverComponent},
-  { path: 'service', component: ServiceComponent},
-  { path: 'register', component: RegisterComponent}
+  { path: 'register', component: RegisterComponent},
+  { path: 'sto', component: StoComponent, canActivate: [AuthGuard],
+    children: [
+      {
+      path: '',
+      component: AccountDataComponent
+      },
+      {
+        path: 'bids',
+        component: AllBidsComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      }
+
+
+    ]
+  }
 ];
