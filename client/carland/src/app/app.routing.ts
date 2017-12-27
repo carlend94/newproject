@@ -10,6 +10,7 @@ import {StoComponent} from "./sto/sto.component";
 import {AccountDataComponent} from "./sto/account-data/account-data.component";
 import {AllBidsComponent} from "./sto/all-bids/all-bids.component";
 import {MapsComponent} from "./maps/maps.component";
+import {AutoShopComponent} from "./auto-shop/auto-shop.component";
 
 export const appRoutes: Routes = [
   { path: '', redirectTo: 'driver', pathMatch: 'full' },
@@ -35,8 +36,11 @@ export const appRoutes: Routes = [
       {
         path: 'maps',
         component: MapsComponent
+      },
+      {
+        path: 'shop',
+        component: AutoShopComponent
       }
-
 
     ]
   }

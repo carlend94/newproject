@@ -11,6 +11,7 @@ export class StoComponent implements OnInit {
   isClassVisible2: boolean = false;
   isClassVisible3: boolean = false;
   isClassVisible4: boolean = false;
+  isClassVisible5: boolean = false;
   yourData: string = "Ваши данные";
   isHover: boolean = false;
   constructor( private authenticationService: AuthenticationService) { }
@@ -23,6 +24,7 @@ export class StoComponent implements OnInit {
     this.isClassVisible2 = false;
     this.isClassVisible3 = false;
     this.isClassVisible4 = false;
+    this.isClassVisible5 = false;
     this.yourData = "Ваши данные";
   }
   makeActive2() {
@@ -30,6 +32,7 @@ export class StoComponent implements OnInit {
     this.isClassVisible2 = true;
     this.isClassVisible3 = false;
     this.isClassVisible4 = false;
+    this.isClassVisible5 = false;
     this.yourData = "Главная страница";
   }
   makeActive3() {
@@ -37,6 +40,7 @@ export class StoComponent implements OnInit {
     this.isClassVisible2 = false;
     this.isClassVisible3 = true;
     this.isClassVisible4 = false;
+    this.isClassVisible5 = false;
     this.yourData = "Заявки на ремонт";
 
   }
@@ -46,7 +50,17 @@ export class StoComponent implements OnInit {
     this.isClassVisible2 = false;
     this.isClassVisible3 = false;
     this.isClassVisible4 = true;
+    this.isClassVisible5 = false;
     this.yourData = "Карта всех СТО";
+  }
+
+  makeActive5() {
+    this.isClassVisible = false;
+    this.isClassVisible2 = false;
+    this.isClassVisible3 = false;
+    this.isClassVisible4 = false;
+    this.isClassVisible5 = true;
+    this.yourData = "Магазин автозапчастей";
   }
 
   onHovering() {

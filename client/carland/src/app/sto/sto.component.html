@@ -33,6 +33,14 @@
       </div>
       <span>Карта всех СТО</span>
     </div>
+
+    <div class="maps" [ngClass]="{'active': isClassVisible5 }" (click)="makeActive5()" routerLink="/sto/shop">
+      <div class="links">
+        <i class="material-icons actives fifth" [ngClass]="{'activess': isClassVisible5 }">airport_shuttle</i>
+
+      </div>
+      <span>Магазин автозапчастей</span>
+    </div>
   </div>
 
   <div class="right-side">

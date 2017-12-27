@@ -21,6 +21,7 @@ import { StoComponent } from './sto/sto.component';
 import { AccountDataComponent } from './sto/account-data/account-data.component';
 import { AllBidsComponent } from './sto/all-bids/all-bids.component';
 import { MapsComponent } from './maps/maps.component';
+import { AutoShopComponent } from './auto-shop/auto-shop.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MapsComponent } from './maps/maps.component';
     StoComponent,
     AccountDataComponent,
     AllBidsComponent,
-    MapsComponent
+    MapsComponent,
+    AutoShopComponent
   ],
   imports: [
     BrowserModule,
