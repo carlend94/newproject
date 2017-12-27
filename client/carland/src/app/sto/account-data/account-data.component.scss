@@ -1,0 +1,73 @@
+.my-data {
+  width: 95%;
+  margin: 0 auto;
+  background-color: white;
+  margin-top: 20px;
+  padding-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(198, 204, 212, 0.75);
+ .header {
+   height: 45px;
+   line-height: 45px;
+   color: black;
+   font-size: 14px;
+   font-weight: 500;
+   border-bottom: 1px solid #e1e1e1;
+ }
+
+  .main-info {
+    padding-top: 10px;
+    display: flex;
+    .company-logo {
+      cursor: pointer;
+      text-align: center;
+      width:200px;
+      border: 1px dashed #34a5da;
+      background: #e2f6ff;
+      color: #34a5da;
+      font-size: 11px;
+      text-transform: uppercase;
+      height: 190px;
+      margin: 2px 0 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      .dowload-photo {
+        margin: 0 auto;
+      }
+    }
+
+    .name-of-service {
+      height:190px;
+    }
+    .company-name_name, .company-email_email, .company-addresses_addresses, .company-phone_phone, .company-site_site, .company-information_information{
+      color: #999;
+      float:left;
+      width:200px;
+      height: 35px;
+      line-height: 35px;
+      padding-left: 20px;
+    }
+    .company-name_name_input, .company-email_email_input, .company-addresses_addresses_input, .company-phone_phone_input, .company-site_site_input, .company-information_information_input {
+      float: right;
+      height: 35px;
+    }
+
+    .company-name_name_input input, .company-email_email_input input, .company-addresses_addresses_input input, .company-phone_phone_input input, .company-site_site_input input, .company-information_information_input input {
+    width:450px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      color: #333;
+      height: 30px;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: 400;
+      transition: border-color linear 0.2s;
+    }
+  }
+
+}
