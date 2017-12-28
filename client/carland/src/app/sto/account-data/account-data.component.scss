@@ -1,5 +1,6 @@
 .my-data {
   width: 95%;
+  padding-bottom: 35px;
   margin: 0 auto;
   background-color: white;
   margin-top: 20px;
@@ -27,7 +28,7 @@
       color: #34a5da;
       font-size: 11px;
       text-transform: uppercase;
-      height: 190px;
+      height: 200px;
       margin: 2px 0 10px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -68,6 +69,55 @@
       font-weight: 400;
       transition: border-color linear 0.2s;
     }
+  }
+
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    padding-left: 222px;
+
+    .reset-all {
+      font-size: 12px;
+      cursor: pointer;
+      color: #1581b3;
+      height: 35px;
+      line-height: 35px;
+    }
+    .reset-all:hover {
+      color: black;
+    }
+
+    .save-data button {
+      margin-left: 385px;
+      width: 150px;
+      background-color: #7ebf0d;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 3px;
+      padding: 0 13px;
+      height: 32px;
+      line-height: 1;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+      transition: all linear 0.2s;
+      color:white;
+      border: 1px solid #7ebf0d;
+    }
+    .save-data button:hover {
+      border-color: #6ea907;
+      background-color: #6ea907;
+
+    }
+
   }
 
 }

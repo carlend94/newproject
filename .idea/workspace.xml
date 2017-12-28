@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d885ebba-db57-4d23-b03a-af324ebe8510" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.html" afterPath="$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.html" />
       <change beforePath="$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.scss" afterPath="$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.scss" />
+      <change beforePath="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.html" afterPath="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.html" />
       <change beforePath="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss" afterPath="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,18 +22,38 @@
       <file leaf-file-name="account-data.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+            <state relative-caret-position="776">
+              <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="account-data.component.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="account-data.component.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+            <state relative-caret-position="412">
+              <caret line="92" column="32" lean-forward="false" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sto.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/sto.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="674">
+              <caret line="91" column="30" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sto.component.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="196" column="17" lean-forward="false" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -78,9 +98,10 @@
         <option value="$PROJECT_DIR$/server/carland/app.js" />
         <option value="$PROJECT_DIR$/server/carland/models/user.js" />
         <option value="$PROJECT_DIR$/server/carland/services/user.service.js" />
-        <option value="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss" />
         <option value="$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.html" />
         <option value="$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.scss" />
+        <option value="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.html" />
+        <option value="$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss" />
       </list>
     </option>
   </component>
@@ -223,12 +244,12 @@
       <workItem from="1513193109034" duration="20000" />
       <workItem from="1513201299388" duration="8648000" />
       <workItem from="1513210961262" duration="2909000" />
-      <workItem from="1514410978993" duration="5694000" />
+      <workItem from="1514410978993" duration="7664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27221000" />
+    <option name="totallyTimeSpent" value="29191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -265,14 +286,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/carland/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/carland/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -544,22 +557,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/carland/controllers/user.controller.js" />
     <entry file="file://$PROJECT_DIR$/server/carland/services/user.service.js" />
-    <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/sto.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="166" column="19" lean-forward="true" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/carland/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -576,18 +573,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.html">
+    <entry file="file://$PROJECT_DIR$/client/carland/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="52" column="25" lean-forward="false" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+        <state relative-caret-position="412">
+          <caret line="92" column="32" lean-forward="false" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/account-data/account-data.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/sto.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="91" column="30" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/carland/src/app/sto/sto.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="196" column="17" lean-forward="false" selection-start-line="196" selection-start-column="17" selection-end-line="196" selection-end-column="17" />
           <folding />
         </state>
       </provider>
